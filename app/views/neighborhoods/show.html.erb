@@ -49,6 +49,13 @@
         </ul>
       </dd>
 
+     <dt>Favorites</dt>
+      <dd>
+        <ul class="list-group">
+          <% @neighborhood.favorites.each do |item| %>
+          <li class="list-group-item"><%= item.dish.name %> at <%= item.venue.name %> by <%= item.user.username %></li>
+          <% end %>
+
     </dl>
 
       <div class="btn-group btn-group-justified">
